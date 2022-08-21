@@ -1,0 +1,20 @@
+type Query {
+    product(id: Int!): Product
+    invalidationCache: Cache
+    responseCache: Cache
+}
+
+type Product {
+    id: Int!
+    name: String!
+    description: String!
+}
+
+type Cache {
+    items: [CacheItem!]!
+}
+
+type CacheItem {
+    key: String!
+    value: String!
+}
